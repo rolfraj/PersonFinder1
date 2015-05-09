@@ -1,46 +1,23 @@
 package com.paanacea.personfinder;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 
 
-public class FindActivity extends ActionBarActivity {
-    Button button_Find;
+public class PersonInformation extends ActionBarActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_find);
-        // Locate the button in activity_main.xml
-        button_Find = (Button) findViewById(R.id.button);
-
-        // Capture button clicks
-        button_Find.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0) {
-
-                // Start NewActivity.class
-                Intent myIntent = new Intent(FindActivity.this,
-                        SearchResultActivity.class);
-
-                EditText editText = (EditText) findViewById(R.id.editText);
-
-                myIntent.putExtra("searchText", editText.getText());
-                startActivity(myIntent);
-
-            }
-        });
-
+        setContentView(R.layout.layout_person_information);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_find, menu);
+        getMenuInflater().inflate(R.menu.menu_person_information, menu);
         return true;
     }
 

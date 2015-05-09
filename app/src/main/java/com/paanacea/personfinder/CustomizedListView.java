@@ -61,7 +61,7 @@ public class CustomizedListView extends Activity {
 		list=(ListView)findViewById(R.id.list);
 		
 		// Getting adapter by passing xml data ArrayList
-        adapter=new LazyAdapter(this, songsList);        
+        //adapter=new LazyAdapter(this, songsList);
         list.setAdapter(adapter);
         
 
